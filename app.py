@@ -5,20 +5,53 @@ from flask import Flask, request, jsonify, render_template
 from transformers import AutoTokenizer
 import pickle
 
-# # 
-app = Flask(__name__)
 model = pickle.load(open('mai_model.pkl', 'rb'))
 # tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
 
 
+app = Flask("__name__")
+
+
+
+q = ""
+
 @app.route("/")
-def loadpage():
-    return render_template("home.html", querys="")
+def loadPage():
+	return render_template('home.html', query="")
 
 
+@app.route("/predict", methods=['POST'])
+def predict():
+    
+    # inputQuery1 = request.form['query1']
+    # inputQuery2 = request.form['query2']
+    # inputQuery3 = request.form['query3']
+    # inputQuery4 = request.form['query4']
+    # inputQuery5 = request.form['query5']
+
+    # model = pickle.load(open("model.sav", "rb"))
+    
+    
+    # data = [[inputQuery1, inputQuery2, inputQuery3, inputQuery4, inputQuery5]]
+    # new_df = pd.DataFrame(data, columns = ['texture_mean', 'perimeter_mean', 'smoothness_mean', 'compactness_mean', 'symmetry_mean'])
+    
+    # single = model.predict(new_df)
+    # probablity = model.predict_proba(new_df)[:,1]
+    
+    # if single==1:
+    #     o1 = "The patient is diagnosed with Breast Cancer"
+    #     o2 = "Confidence: {}".format(probablity*100)
+    # else:
+    #     o1 = "The patient is not diagnosed with Breast Cancer"
+    #     o2 = "Confidence: {}".format(probablity*100)
+        
+    return render_template('home.html', output1="I AM RUNNING")
+    
+if __name__ == "__main__":
+    app.run()
 # @app.route('/reply', methods=['GET'])
-@app.route('/reply', methods=['GET'])
-def reply():
+# @app.route('/reply', methods=['GET'])
+# def reply():
     
 #     data = request.get_json(force=True) 
 #     new_user_input_ids = tokenizer.encode(data["data"] + tokenizer.eos_token, return_tensors='pt')
@@ -36,9 +69,9 @@ def reply():
 #     )
 
 #     x = "{}".format(tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True))
-    x = "I am Running"
+#     x = "I am Running"
 
-    return render_template("home.html", output=x)
+#     return render_template("home.html", output=x)
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()
