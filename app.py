@@ -32,7 +32,7 @@ def reply():
 #     x = "{}".format(tokenizer.decode(chat_history_ids[:, bot_input_ids.shape[-1]:][0], skip_special_tokens=True))
     x = "I am Running"
 
-    return jsonify(x)
+    return render_template("home.html", output=x)
 
 if __name__ == "__main__":
     app.run()
