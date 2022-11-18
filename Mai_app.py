@@ -2,13 +2,13 @@
 from flask import Flask, request, jsonify, render_template
 
 # # Transformer Imports
-# from transformers import AutoTokenizer
-# import pickle
+from transformers import AutoTokenizer
+import pickle
 
 # # 
 app = Flask(__name__)
-# model = pickle.load(open('mai_model.pkl', 'rb'))
-# tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
+model = pickle.load(open('mai_model.pkl', 'rb'))
+tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
 
 # @app.route('/reply', methods=['GET'])
 @app.route('/', methods=['GET'])
