@@ -10,6 +10,12 @@ app = Flask(__name__)
 model = pickle.load(open('mai_model.pkl', 'rb'))
 # tokenizer = AutoTokenizer.from_pretrained("microsoft/DialoGPT-small")
 
+
+@app.route("/")
+def loadpage():
+    return render_template("home.html", querys="")
+
+
 # @app.route('/reply', methods=['GET'])
 @app.route('/reply', methods=['GET'])
 def reply():
