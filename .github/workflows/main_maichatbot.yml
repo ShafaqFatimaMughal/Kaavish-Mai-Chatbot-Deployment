@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'MaiChatbot'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A4396B69B9FD46FC9982B2D20CB0A1A0 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7C993531D46A4243B1622FF33C51FC0C }}
