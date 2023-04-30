@@ -25,6 +25,6 @@ The Dockerfile is used to initialize the enviroment. If you plan on running a si
 Once you've configured the requirements.txt, you can make adjustments to the .dockerignore file. The .dockerignore fill will mention anyfile that you will not need to run the main application. Here we have only defined it as the text.py file which we were using to test out the model.
 
 ### Step 6: Cloud Build and Deploy
-Once you have everything up and ready, you can host your model by running the following commands:
-```gcloud builds submit --tag gcr.io/<project-id>/get_prediction```
+Once you have everything up and ready, you can host your model by running the following commands:\n
+```gcloud builds submit --tag gcr.io/<project-id>/get_prediction```\n
 ```gcloud run deploy --image gcr.io/<project-id>/get_prediction --platform managed```
