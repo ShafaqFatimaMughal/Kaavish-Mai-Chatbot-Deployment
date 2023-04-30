@@ -26,5 +26,5 @@ Once you've configured the requirements.txt, you can make adjustments to the .do
 
 ### Step 6: Cloud Build and Deploy
 Once you have everything up and ready, you can host your model by running the following commands:
-'''gcloud builds submit --tag gcr.io/<project-id>/get_prediction'''
-'''gcloud run deploy --image gcr.io/<project-id>/get_prediction --platform managed'''
+```gcloud builds submit --tag gcr.io/<project-id>/get_prediction```
+```gcloud run deploy --image gcr.io/<project-id>/get_prediction --platform managed```
