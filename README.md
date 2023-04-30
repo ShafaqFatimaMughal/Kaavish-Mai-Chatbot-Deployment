@@ -29,7 +29,7 @@ Once you have everything up and ready, open up the Deployment folder in your cod
 ```gcloud builds submit --tag gcr.io/<project-id>/get_prediction``` <br />
 ```gcloud run deploy --image gcr.io/<project-id>/get_prediction --platform managed```
 
-## Error You May Encounter
+## Errors You May Encounter
 A common error you may encounter while hosting the model is when GCP crashes with a Cloud Build Failed error. This is a common occurance, and may be caused by a
 weak network connection. To get rid of the error, you may want to use a faster, responsive connection. If you are sure that this is not the case, all you need to do is 
 wait. Retry in a few hours and it will be good to go.
