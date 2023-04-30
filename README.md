@@ -1,5 +1,5 @@
 # Kaavish-Mai-Chatbot-Deployment
-This code is a sample that helps host the Mai model on Google Cloud Platform. The project can be found on the following GitHub like: <br />
+This code is a sample that helps host the Mai model on Google Cloud Platform. The project can be found on the following GitHub: <br />
 https://github.com/ShafaqFatimaMughal/Kaavish-Mai-Transformer-Based-Urdu-Chatbot
 
 ## How To Host The Model on GCP
